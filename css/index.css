@@ -1,0 +1,193 @@
+/* seletor universal, usado para selecionar todos os elementos em um documento HTML */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* permite que defina valores que podem ser reutilizados em todo o documento CSS */
+:root{
+    --bg-color: #0e0e10;
+    --text-color: #fff;
+    --main-color: #7d13d8;
+    --bar-color: #18181b;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    height: 45px;
+    position:fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bar-color);
+    padding: 28px 12%;
+    transition: all .50s ease;
+    padding: 14px 2%;
+    transition: .2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+    border-radius: 40%;
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin: 5px;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    margin-left: 55%;
+}
+.navbar02{
+    display: flex;
+    margin-left: auto;
+    padding: 5px;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0px;
+    margin: 0px  5px;
+    transition: all .50s ease;
+}
+.navbar02 a{
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0px;
+    margin: 0px  10px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+
+}
+.navbar02 a:hover{
+    color: var(--main-color);
+
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+.navbar02 a.active{
+    color: var(--main-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+    font-size: 190%;
+}
+.main a{
+    color: var(--text-color);
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    
+}
+
+@media(min-width:1091px) {
+    #biblioteca{
+        display: none;
+    }
+    #multistream{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        min-height: 10vh;
+        height: auto;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(2px);
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
+
+@media (max-width: 1090px){
+    .navbar02{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        min-height: 10vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(2px);
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}

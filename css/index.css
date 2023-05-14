@@ -1,4 +1,7 @@
-/* seletor universal, usado para selecionar todos os elementos em um documento HTML */
+/*Este código remove as margens e preenchimentos padrão, 
+define a caixa de modelo de todos os elementos e define a fonte padrão como
+'Inconsolata', uma fonte monoespaçada. Também remove a decoração de texto 
+e a lista de estilo padrão para todos os elementos.*/
 *{
     padding: 0;
     margin: 0;
@@ -8,42 +11,60 @@
     list-style: none;
 }
 
-/* permite que defina valores que podem ser reutilizados em todo o documento CSS */
+/* Este código define as variáveis de cores para uso posterior em estilos CSS. */
 :root{
-    --bg-color: #0e0e10;
+    --bg-color: #0e0e10; 
     --text-color: #fff;
     --main-color: #7d13d8;
     --bar-color: #18181b;
 }
+
+/* Este código define a altura mínima do corpo da página como 100% da altura da viewport e 
+estiliza o fundo e a cor do texto usando variáveis. */
 body{
-    min-height: 100vh;
-    background: var(--bg-color);
-    color: var(--text-color);
+    min-height: 100vh; 
+    background: var(--bg-color); 
+    color: var(--text-color); 
 }
+
+/*Este código estiliza o cabeçalho da página com altura fixa, posicionado fixo no topo, 
+fundo colorido e com transição, usando o modelo de caixa flexível para alinhar os elementos e 
+espaçamento interno ajustável.*/
 header{
-    height: 45px;
-    position:fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--bar-color);
-    padding: 28px 12%;
+    height: 45px; 
+    position:fixed; 
+    width: 100%; 
+    top: 0; 
+    right: 0; 
+    z-index: 1000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: var(--bar-color); 
+    padding: 28px 12%; 
     transition: all .50s ease;
-    padding: 14px 2%;
-    transition: .2s;
+    padding: 14px 2%; 
+    transition: 0.2s; 
 }
+
+/* Este código define uma classe "logo" que aplica um display "flex" 
+e centraliza verticalmente os itens com "align-items: center". */
 .logo{
     display: flex;
     align-items: center;
 }
+
+/* Este código seleciona a imagem dentro do elemento com a classe "logo" 
+e define a largura como 40 pixels e o raio da borda como 40%. */
 .logo img{
     width: 40px;
     border-radius: 40%;
 }
+
+/* seleciona o elemento span dentro do elemento com a classe "logo" e 
+define a cor do texto como a cor especificada pela variável --text-color, 
+tamanho da fonte como 20 pixels, peso da fonte como 600, margem esquerda como 5 pixels, 
+margem e preenchimento como 5 pixels e 0, respectivamente. */
 .logo span{
     color: var(--text-color);
     font-size: 20px;
@@ -52,10 +73,15 @@ header{
     margin: 5px;
     padding: 0;
 }
+
+/* Cria uma barra de navegação e posiciona-a com margem à esquerda de 55%. */
 .navbar{
     display: flex;
     margin-left: 55%;
 }
+
+/* Define um menu de navegação horizontal com alinhamento à direita
+ e espaçamento interno de 5 pixels entre os elementos. */
 .navbar02{
     display: flex;
     margin-left: auto;

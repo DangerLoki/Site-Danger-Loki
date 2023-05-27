@@ -6,14 +6,14 @@ e a lista de estilo padrão para todos os elementos.*/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style: none;
 }
 
 /* Este código define as variáveis de cores para uso posterior em estilos CSS. */
 :root{
-    --bg-color: #0e0e10; 
+    --bg-color: #1d1d1d;
     --text-color: #fff;
     --main-color: #7d13d8;
     --bar-color: #18181b;
@@ -22,7 +22,6 @@ e a lista de estilo padrão para todos os elementos.*/
 /* Este código define a altura mínima do corpo da página como 100% da altura da viewport e 
 estiliza o fundo e a cor do texto usando variáveis. */
 body{
-    min-height: 100vh; 
     background: var(--bg-color); 
     color: var(--text-color); 
 }
@@ -87,6 +86,10 @@ margem e preenchimento como 5 pixels e 0, respectivamente. */
     margin-left: auto;
     padding: 5px;
 }
+
+/* Este código define as propriedades para um link dentro de uma barra de navegação. 
+Ele define a cor, tamanho da fonte, peso da fonte, 
+preenchimento, margem e tempo de transição para a mudança de propriedades. */
 .navbar a{
     color: var(--text-color);
     font-size: 15px;
@@ -95,6 +98,10 @@ margem e preenchimento como 5 pixels e 0, respectivamente. */
     margin: 0px  5px;
     transition: all .50s ease;
 }
+
+/* Este código define as propriedades para um link dentro de uma barra de navegação 02. 
+Ele define a cor, tamanho da fonte, peso da fonte, 
+preenchimento, margem e tempo de transição para a mudança de propriedades. */
 .navbar02 a{
     color: var(--text-color);
     font-size: 15px;
@@ -103,54 +110,88 @@ margem e preenchimento como 5 pixels e 0, respectivamente. */
     margin: 0px  10px;
     transition: all .50s ease;
 }
+
+/* define o estilo de um link dentro de uma barra de navegação 
+e muda a cor do texto quando o mouse está sobre o link. */
 .navbar a:hover{
     color: var(--main-color);
-
 }
+
+/* define o estilo de um link dentro de uma barra de navegação 02
+e muda a cor do texto quando o mouse está sobre o link. */
 .navbar02 a:hover{
     color: var(--main-color);
-
 }
+
+/* Este código define a cor do texto dos links ativos na barra de navegação (.navbar) 
+como a cor principal do tema (--main-color). */
 .navbar a.active{
     color: var(--main-color);
 }
+
+/* Este código define a cor do texto dos links ativos na barra de navegação 02 (.navbar) 
+como a cor principal do tema (--main-color). */
 .navbar02 a.active{
     color: var(--main-color);
 }
+
+/* Este código define um contêiner principal com estilo CSS, que possui display flex, 
+alinhamento centralizado, tamanho de fonte grande e aplicação de estilo de 190% para seus filhos. */
 .main{
     display: flex;
     align-items: center;
     font-size: 190%;
 }
+/* Define a cor do texto de links dentro de elementos com classe "main". */
 .main a{
     color: var(--text-color);
 }
+
+/* O código define uma classe "user" com um estilo 
+de exibição em linha flexível e alinhamento centralizado. */
 .user{
     display: flex;
     align-items: center;
 }
+
+/* Define o estilo de ícone dentro do elemento de usuário. 
+O ícone terá uma cor definida e um tamanho específico com margem à direita. */
 .user i{
     color: var(--main-color);
     font-size: 28px;
     margin-right: 7px;
 }
+
+/* Quando o mouse passa por cima de um link dentro do elemento com classe "main", 
+a cor do texto do link é alterada*/
 .main a:hover{
     color: var(--main-color);
 }
+
+/* Define o estilo do ícone de menu, permitindo a interação do 
+usuário e definindo sua ordem na camada z. */
 #menu-icon{
     color: var(--text-color);
     cursor: pointer;
     z-index: 10001;
-    
 }
 
+/* Esse código define as regras de estilo da barra de navegação (navbar) 
+quando a largura da tela é maior que 1091 pixels, incluindo as regras para 
+esconder elementos específicos e definir a posição, o estilo, a transição e a animação da navbar. */
 @media(min-width:1091px) {
+
+    /* Esconde elementos com IDs 'biblioteca' e 'multistream'. */
     #biblioteca{
         display: none;
     }
     #multistream{
         display: none;
     }
+
+    /* Este código define o estilo da barra de navegação com posição absoluta, 
+    com largura de 200 pixels, altura variável, cor de fundo e bordas arredondadas, 
+    além de adicionar uma transição suave. */
     .navbar{
         position: absolute;
         top: 100%;
@@ -165,12 +206,19 @@ margem e preenchimento como 5 pixels e 0, respectivamente. */
         border-radius: 10px;
         transition: all .50s ease;
     }
+
+    /* Este código define a aparência de um link dentro de uma barra de navegação. 
+    O link é exibido como um bloco com margem superior e inferior de 12px, 
+    e tem preenchimento horizontal de 25px. Além disso, uma transição suave é 
+    aplicada a todas as propriedades do link com duração de 0,5 segundos. */
     .navbar a{
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
         transition: all .50s ease;
     }
+
+    
     .navbar a:hover{
         color: var(--text-color);
         transform: translateY(2px);
@@ -217,3 +265,4 @@ margem e preenchimento como 5 pixels e 0, respectivamente. */
         right: 2%;
     }
 }
+

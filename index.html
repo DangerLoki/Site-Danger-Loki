@@ -9,16 +9,15 @@
         <!-- Título -->
         <title>Danger Loki</title>
     
-        
-    
         <!-- Estilos CSS-->
-        <link href="css/index.css" type="text/css" rel="stylesheet">
-    
-        <!-- Fontes -->
-        <link href="https://fonts.googleapis.com" rel="preconnect">
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link rel="stylesheet" href="css/login.css" type="text/css">
         
+        <!-- Fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
         <!-- Ícone -->
         <link rel="icon" href="image/palette-fill.png" type="image/x-icon">
 
@@ -38,8 +37,8 @@
             com o atributo "alt" vazio, que é usado para fornecer uma descrição da imagem em caso 
             de falha em carregar a imagem. -->
         <a href="#" class="logo"> 
-            <img src="image/channels4_profile.jpg" alt=""> 
-            <span> 
+            <img src="image/channels4_profile.jpg" alt="">
+            <span>
                 Danger Loki
             </span> 
         </a>       
@@ -77,7 +76,7 @@
             um "user" que contém um link com um ícone de usuário e 
             um "bx bx-menu" que tem um ID "menu-icon". -->
         <div class="main">
-            <div class="user">
+            <div class="btnUser">
                 <a href="#">
                     <i class="ri-user-fill"></i>
                 </a>
@@ -88,8 +87,91 @@
         </div>
     </header>
 
-    
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label class="labelEmail">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">
+                        Lembre-me
+                        <a href="#">Esqueci minha Senha</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>
+                        Não tenho conta
+                        <a href="#" class="register-link">Registre-se</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registro</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Apelido</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label class="labelEmail">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">
+                        Eu aceito os termos
+                    </label>
+                </div>
+                <button type="submit" class="btn">Registro</button>
+                <div class="login-register">
+                    <p>
+                        tem conta?
+                        <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Conexão com o script.js -->
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

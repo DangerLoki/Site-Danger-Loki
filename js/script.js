@@ -1,11 +1,11 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+var menu = document.querySelector('#menu-icon');
+var navbar = document.querySelector('.navbar');
 
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnUser');
-const iconClose = document.querySelector('.icon-close');
+var wrapper = document.querySelector('.wrapper');
+var loginLink = document.querySelector('.login-link');
+var registerLink = document.querySelector('.register-link');
+var btnPopup = document.querySelector('.btnUser');
+var iconClose = document.querySelector('.icon-close');
 
 menu.onclick = () => {
   menu.classList.toggle('bx-x');
